@@ -17,6 +17,23 @@
 
 国外地址: https://g.yx24.me
 
+画好界面点保存,会下载2个文件 `设计文件.json`,`辅助代码.js` 注意你的浏览器允许下载多个文件的权限
+
+下载本项目的代码 复制 `go-easy-demo` 文件夹作为开发项目
+
+`go-easy-demo/frontend/src/窗口/设计文件.json`
+
+`go-easy-demo/frontend/src/窗口/辅助代码.js`
+
+运行项目 就可以看到你设计好的界面了.
+
+```
+cd go-easy-demo
+wails dev
+```
+
+想要更好的无缝使用体验需要下载客户端程序.
+
 
 ## 实时调试
 
