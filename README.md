@@ -2,8 +2,25 @@
 
 用于运行窗口设计师设计好界面和程序
 
+
+
 ![](https://user-images.githubusercontent.com/59047063/270091148-a89d2ab9-9ba3-4efc-b0fa-0a7dcc3bcfc1.gif
 )
+
+
+创建项目
+
+```
+wails init -n "go-easy-demo" -t https://github.com/duolabmeng6/wails-template-vue-go-easy
+```
+
+运行窗口
+
+```
+cd go-easy-demo
+wails dev
+```
+
 
 [下载 GoEasyDesigner 窗口设计师](https://github.com/duolabmeng6/GoEasyDesigner/releases)
 
