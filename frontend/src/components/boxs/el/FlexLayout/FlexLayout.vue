@@ -4,7 +4,7 @@
             :key="DivItemIndex"
             :span="DivItem.占比"
     >
-      <component is="渲染组件" v-for="(item2, DivItemIndex2) in [DivItem]" :key="DivItemIndex2"
+      <component is="RenderDesignComponent" v-for="(item2, DivItemIndex2) in [DivItem]" :key="DivItemIndex2"
                  :item="item2"
 
       />

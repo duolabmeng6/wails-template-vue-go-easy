@@ -1,7 +1,7 @@
 import {ref} from 'vue'
 import {defineStore} from 'pinia'
 import {WindowSetSize, WindowSetTitle} from "../../wailsjs/runtime"; // 根据实际文件路径进行修改
-import {绑定窗口事件} from '@/窗口/窗口事件'
+import {BindWindowEvent} from '@/窗口/窗口事件'
 
 export const 引入窗口数据 = defineStore('窗口数据', {
     state: () => {
@@ -12,7 +12,7 @@ export const 引入窗口数据 = defineStore('窗口数据', {
     },
     actions: {
         初始化() {
-            绑定窗口事件(this, this.组件)
+            BindWindowEvent(this, this.组件)
             try {
                 if (this.组件.窗口.hasOwnProperty("事件创建完毕")) {
                     this.窗口创建完毕()
@@ -38,78 +38,19 @@ export const 引入窗口数据 = defineStore('窗口数据', {
                     document.body.style.overflow = 'auto'
                 }, 1)
                 WindowSetTitle(dthis.组件.窗口.标题)
-
-                return
-                // console.log(window.navigator)
-                // if (window.navigator && window.navigator.appVersion && window.navigator.appVersion.indexOf("Mac") !== -1) {
-                //     console.log("macOS system.");
-                //     WindowSetSize(parseInt(this.组件.窗口.width), parseInt(this.组件.窗口.height) + 28)
-                // } else {
-                //     console.log("window");
-                //     //win10
-                //     //win11
-                //     navigator.userAgentData.getHighEntropyValues(["platformVersion"])
-                //         .then(ua => {
-                //             if (navigator.userAgentData.platform === "Windows") {
-                //                 const majorPlatformVersion = parseInt(ua.platformVersion.split('.')[0]);
-                //                 if (majorPlatformVersion >= 13) {
-                //                     console.log("Windows 11");
-                //                     WindowSetSize(parseInt(this.组件.窗口.width) + 16, parseInt(this.组件.窗口.height) + 39)
-                //                 } else if (majorPlatformVersion > 0) {
-                //                     console.log("Windows 10");
-                //                     WindowSetSize(parseInt(this.组件.窗口.width) + 13, parseInt(this.组件.窗口.height) + 35)
-                //                 } else {
-                //                     console.log("Windows 10");
-                //                     WindowSetSize(parseInt(this.组件.窗口.width) + 13, parseInt(this.组件.窗口.height) + 35)
-                //                 }
-                //             } else {
-                //                 console.log("Not running on Windows");
-                //                 WindowSetSize(parseInt(this.组件.窗口.width) + 13, parseInt(this.组件.窗口.height) + 35)
-                //             }
-                //         });
-                // }
-                // WindowSetTitle(this.组件.窗口.标题)
             } catch (e) {
 
             }
         },
-        handleAllEvents(el, e, item) {
-            let 事件列表;
-            事件列表 = {
-                "click": "被单击",
-                "mousedown": "鼠标左键被按下",
-                "mouseup": "鼠标左键被放开",
-                "dblclick": "被双击",
-                "contextmenu": "鼠标右键被按下",
-                "mousemove": "鼠标位置被移动",
-                "focus": "获得焦点",
-                "blur": "失去焦点",
-                "keydown": "按下某键",
-                "keyup": "放开某键",
-                "mousewheel": "滚轮被滚动"
-            }
-            let 最终事件名称 = item.名称 + 事件列表[event.type]
-
-            try{
-                var 动态函数 = undefined
-                eval(`动态函数 = this.${最终事件名称}`)
-                动态函数(e, item)
-            } catch (e) {
-                console.log("函数调用出错", 最终事件名称,"动态函数",动态函数,"e",e)
-            }
-        },
-
-        组件点击(e, item) {
-            console.log("item", item)
-            if (item.事件被单击 == "" || item.事件被单击 == undefined) {
-                return
-            }
-            let 动态脚本 = "this." + item.事件被单击 + "()"
+        handleAllEvents(el, e, item, callFuncName) {
             try {
-                eval(动态脚本)
+                var dynamicFunction = undefined
+                eval(`dynamicFunction = this.${callFuncName}`)
+                dynamicFunction(e, item)
             } catch (e) {
-                console.log("调用未定义函数", item.事件被单击)
+                console.log("函数调用出错", callFuncName, "dynamicFunction", dynamicFunction, "e", e)
             }
-        }
+        },
+
     },
 })

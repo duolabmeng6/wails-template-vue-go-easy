@@ -2,11 +2,11 @@
   <template v-if="item.布局方式 == 'header-main'">
     <el-container :style="getItemStyle(item)">
       <el-header>
-        <component is="渲染组件" v-for="(subItem, subIndex) in getSubComponents('header')"
+        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in getSubComponents('header')"
                    :key="subIndex" :item="subItem"/>
       </el-header>
       <el-main>
-        <component is="渲染组件" v-for="(subItem, subIndex) in getSubComponents('main')"
+        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in getSubComponents('main')"
                    :key="subIndex" :item="subItem"/>
       </el-main>
     </el-container>
@@ -14,15 +14,15 @@
   <template v-if="item.布局方式 == 'header-main-footer'">
     <el-container :style="getItemStyle(item)">
       <el-header>
-        <component is="渲染组件" v-for="(subItem, subIndex) in  getSubComponents('header')"
+        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in  getSubComponents('header')"
                    :key="subIndex" :item="subItem"/>
       </el-header>
       <el-main>
-        <component is="渲染组件" v-for="(subItem, subIndex) in getSubComponents('main')"
+        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in getSubComponents('main')"
                    :key="subIndex" :item="subItem"/>
       </el-main>
       <el-footer>
-        <component is="渲染组件" v-for="(subItem, subIndex) in getSubComponents('footer')"
+        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in getSubComponents('footer')"
                    :key="subIndex" :item="subItem"/>
       </el-footer>
     </el-container>
@@ -31,11 +31,11 @@
     <el-container :style="getItemStyle(item)">
       <el-aside :width="getSubComponents('aside')[0].width">
 
-        <component is="渲染组件" v-for="(subItem, subIndex) in  getSubComponents('aside')"
+        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in  getSubComponents('aside')"
                    :key="subIndex" :item="subItem"/>
       </el-aside>
       <el-main>
-        <component is="渲染组件" v-for="(subItem, subIndex) in getSubComponents('main')"
+        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in getSubComponents('main')"
                    :key="subIndex" :item="subItem"/>
       </el-main>
     </el-container>
@@ -43,16 +43,16 @@
   <template v-if="item.布局方式 == 'header-aside-main'">
     <el-container :style="getItemStyle(item)">
       <el-header>
-        <component is="渲染组件" v-for="(subItem, subIndex) in  getSubComponents('header')"
+        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in  getSubComponents('header')"
                    :key="subIndex" :item="subItem"/>
       </el-header>
       <el-container>
         <el-aside :width="getSubComponents('aside')[0].width">
-          <component is="渲染组件" v-for="(subItem, subIndex) in  getSubComponents('aside')"
+          <component is="RenderDesignComponent" v-for="(subItem, subIndex) in  getSubComponents('aside')"
                      :key="subIndex" :item="subItem"/>
         </el-aside>
         <el-main>
-          <component is="渲染组件" v-for="(subItem, subIndex) in getSubComponents('main')"
+          <component is="RenderDesignComponent" v-for="(subItem, subIndex) in getSubComponents('main')"
                      :key="subIndex" :item="subItem"/>
         </el-main>
       </el-container>
@@ -61,23 +61,23 @@
   <template v-if="item.布局方式 == 'header-aside-main-footer'">
     <el-container :style="getItemStyle(item)">
       <el-header>
-        <component is="渲染组件" v-for="(subItem, subIndex) in  getSubComponents('header')"
+        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in  getSubComponents('header')"
                    :key="subIndex" :item="subItem"/>
       </el-header>
       <el-container>
         <el-aside :width="getSubComponents('aside')[0].width">
 
-          <component is="渲染组件" v-for="(subItem, subIndex) in  getSubComponents('aside')"
+          <component is="RenderDesignComponent" v-for="(subItem, subIndex) in  getSubComponents('aside')"
                      :key="subIndex" :item="subItem"/>
         </el-aside>
         <el-container>
 
           <el-main>
-            <component is="渲染组件" v-for="(subItem, subIndex) in getSubComponents('main')"
+            <component is="RenderDesignComponent" v-for="(subItem, subIndex) in getSubComponents('main')"
                        :key="subIndex" :item="subItem"/>
           </el-main>
           <el-footer>
-            <component is="渲染组件" v-for="(subItem, subIndex) in getSubComponents('footer')"
+            <component is="RenderDesignComponent" v-for="(subItem, subIndex) in getSubComponents('footer')"
                        :key="subIndex" :item="subItem"/>
           </el-footer>
         </el-container>
@@ -88,16 +88,16 @@
     <el-container :style="getItemStyle(item)">
       <el-aside :width="getSubComponents('aside')[0].width">
 
-        <component is="渲染组件" v-for="(subItem, subIndex) in  getSubComponents('aside')"
+        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in  getSubComponents('aside')"
                    :key="subIndex" :item="subItem"/>
       </el-aside>
       <el-container>
         <el-header>
-          <component is="渲染组件" v-for="(subItem, subIndex) in  getSubComponents('header')"
+          <component is="RenderDesignComponent" v-for="(subItem, subIndex) in  getSubComponents('header')"
                      :key="subIndex" :item="subItem"/>
         </el-header>
         <el-main>
-          <component is="渲染组件" v-for="(subItem, subIndex) in getSubComponents('main')"
+          <component is="RenderDesignComponent" v-for="(subItem, subIndex) in getSubComponents('main')"
                      :key="subIndex" :item="subItem"/>
         </el-main>
 
@@ -108,20 +108,20 @@
     <el-container :style="getItemStyle(item)">
       <el-aside :width="getSubComponents('aside')[0].width">
 
-        <component is="渲染组件" v-for="(subItem, subIndex) in  getSubComponents('aside')"
+        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in  getSubComponents('aside')"
                    :key="subIndex" :item="subItem"/>
       </el-aside>
       <el-container>
         <el-header>
-          <component is="渲染组件" v-for="(subItem, subIndex) in  getSubComponents('header')"
+          <component is="RenderDesignComponent" v-for="(subItem, subIndex) in  getSubComponents('header')"
                      :key="subIndex" :item="subItem"/>
         </el-header>
         <el-main>
-          <component is="渲染组件" v-for="(subItem, subIndex) in getSubComponents('main')"
+          <component is="RenderDesignComponent" v-for="(subItem, subIndex) in getSubComponents('main')"
                      :key="subIndex" :item="subItem"/>
         </el-main>
         <el-footer>
-          <component is="渲染组件" v-for="(subItem, subIndex) in getSubComponents('footer')"
+          <component is="RenderDesignComponent" v-for="(subItem, subIndex) in getSubComponents('footer')"
                      :key="subIndex" :item="subItem"/>
         </el-footer>
       </el-container>

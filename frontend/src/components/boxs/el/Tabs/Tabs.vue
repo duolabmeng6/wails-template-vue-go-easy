@@ -11,7 +11,7 @@
         :key="tabItemIndex"
         :label="tabItem.标题"
     >
-      <component is="渲染组件"  v-for="(tabItem2, tabItemIndex2) in [tabItem]" :key="tabItemIndex2" :item="tabItem2"/>
+      <component is="RenderDesignComponent"  v-for="(tabItem2, tabItemIndex2) in [tabItem]" :key="tabItemIndex2" :item="tabItem2"/>
     </el-tab-pane>
   </el-tabs>
 

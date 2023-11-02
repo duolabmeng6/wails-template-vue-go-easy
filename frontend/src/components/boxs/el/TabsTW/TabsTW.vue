@@ -36,7 +36,7 @@
         >
 
           <div class="tab w-full" v-show="item.现行选中项 == tabItemIndex" style="background:rgb(246, 246, 246); ">
-            <component is="渲染组件" v-for="(tabItem2, tabItemIndex2) in [tabItem]" :key="tabItemIndex2"
+            <component is="RenderDesignComponent" v-for="(tabItem2, tabItemIndex2) in [tabItem]" :key="tabItemIndex2"
                        :item="tabItem2"/>
 
           </div>

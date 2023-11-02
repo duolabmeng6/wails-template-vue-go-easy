@@ -1,6 +1,6 @@
 <template>
   <div style="position: relative;">
-    <component is="渲染组件" v-for="(item, index) in 窗口.list" :key="index" :item="item"/>
+    <component is="RenderDesignComponent" v-for="(item, index) in 窗口.list" :key="index" :item="item"/>
   </div>
 </template>
 
