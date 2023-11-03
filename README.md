@@ -1,20 +1,16 @@
-# 窗口设计师 GoEasyDesigner 的演示项目 
+# Demonstration project for GoEasyDesigner window designer
 
-用于运行窗口设计师设计好界面和程序
+Used to run the interface and program designed by the window designer
 
+![GIF](https://user-images.githubusercontent.com/59047063/270091148-a89d2ab9-9ba3-4efc-b0fa-0a7dcc3bcfc1.gif)
 
-
-![](https://user-images.githubusercontent.com/59047063/270091148-a89d2ab9-9ba3-4efc-b0fa-0a7dcc3bcfc1.gif
-)
-
-
-创建项目
+Create project:
 
 ```
-wails init -n "go-easy-demo" -t https://github.com/duolabmeng6/wails-template-vue-go-easy
+wails init -n "go-easy-demo" -t <https://github.com/duolabmeng6/wails-template-vue-go-easy>
 ```
 
-运行窗口
+Run window:
 
 ```
 cd go-easy-demo
@@ -22,46 +18,29 @@ wails dev
 ```
 
 
-[下载 GoEasyDesigner 窗口设计师](https://github.com/duolabmeng6/GoEasyDesigner/releases)
+Download GoEasyDesigner window designer (<https://github.com/duolabmeng6/GoEasyDesigner/releases>).
 
-[ GoEasyDesigner 项目地址](https://github.com/duolabmeng6/GoEasyDesigner)
+GoEasyDesigner project address (<https://github.com/duolabmeng6/GoEasyDesigner>)
 
-# 在线体验窗口设计师
+# Online experience of window designer
 
-感谢朋友提供的服务器,可以愉快的在线体验了
+The web page only provides basic interface design. If you need better coding experience, please download the client.
 
-国内地址: https://go.kenhong.com/
+Chinese address: <https://go.kenhong.com/>
 
-国外地址: https://g.yx24.me
+Foreign address: <https://g.yx24.me>
 
-画好界面点保存,会下载2个文件 `design.json`,`__aux_code.js` 注意你的浏览器允许下载多个文件的权限
+Click save after designing the interface. It will download two files (`design.json`, `__aux_code.js`). Please note that your browser allows downloading multiple files.
 
-下载本项目的代码 复制 `go-easy-demo` 文件夹作为开发项目
+Download the code of this project and copy the `go-easy-demo` folder as the development project.
 
 `go-easy-demo/frontend/src/win/design.json`
 
 `go-easy-demo/frontend/src/win/__aux_code.js`
 
-运行项目 就可以看到你设计好的界面了.
+Run the project to see the interface you designed.
 
 ```
 cd go-easy-demo
 wails dev
 ```
-
-想要更好的无缝使用体验需要下载客户端程序.
-
-
-## 实时调试
-
-要在实时开发模式下运行，请运行项目目录中的 `wails dev`。这将运行一个Vite开发
-
-服务器将为您的前端更改提供非常快速的热重新加载。如果你想在浏览器中开发
-
-并可以访问您的Go方法，还有一个在 `http://localhost:34115` 上运行的开发服务器。连接
-
-在浏览器中，您可以从devtools调用您的Go代码。
-
-## 编译
-
-要构建可再分发的生产模式软件包，请使用  `wails build`。
