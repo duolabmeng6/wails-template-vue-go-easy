@@ -1,3 +1,21 @@
+<p align="center" style="text-align: center">
+
+</p>
+
+<p align="center">
+</p>
+
+<div align="center">
+<strong>
+<samp>
+
+[English](README.md) · [简体中文](README.zh-Hans.md) 
+
+</samp>
+</strong>
+</div>
+
+
 # Demonstration project for GoEasyDesigner window designer
 
 Used to run the interface and program designed by the window designer
