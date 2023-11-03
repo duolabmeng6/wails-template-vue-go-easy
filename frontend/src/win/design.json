@@ -1,0 +1,424 @@
+[
+  {
+    "id": "1",
+    "name": "Win",
+    "componentName": "Window",
+    "text": "Window",
+    "top": "0",
+    "left": "0",
+    "width": "100%",
+    "height": "100%",
+    "background": "rgba(0, 0, 0, 0.05)",
+    "noPlace": false,
+    "noDrag": true,
+    "disable": false,
+    "visible": true,
+    "zIndex": 0,
+    "childComponents": [
+      {
+        "top": "0",
+        "left": "0",
+        "width": "100%",
+        "height": "100%",
+        "value": "0",
+        "noPlace": true,
+        "visible": true,
+        "disable": false,
+        "zIndex": 0,
+        "layoutMethod": "aside-header-main-footer",
+        "childComponents": [
+          {
+            "componentName": "elContainer",
+            "name": "ContentAreaHeader1",
+            "area": "header",
+            "top": "0",
+            "left": "0",
+            "width": "100%",
+            "height": "60px",
+            "position": "relative",
+            "noPlace": false,
+            "noDrag": true,
+            "visible": true,
+            "disable": false,
+            "pid": "id-66662",
+            "zIndex": 0,
+            "childComponents": [
+              {
+                "top": "9",
+                "left": "47",
+                "width": "565",
+                "height": "40",
+                "noPlace": true,
+                "visible": true,
+                "disable": false,
+                "zIndex": 0,
+                "size": "default",
+                "truncated": false,
+                "tag": "p",
+                "tagPosition": "text-center",
+                "corlor": "#606266",
+                "text": "Hello GoEasyDesigner",
+                "id": "id-28348",
+                "componentName": "elLabel",
+                "name": "Label1",
+                "data_id": "1e69ec"
+              },
+              {
+                "top": "inherit",
+                "left": "inherit",
+                "width": "146",
+                "height": "32",
+                "right": "0",
+                "bottom": "inherit",
+                "noPlace": true,
+                "visible": true,
+                "disable": false,
+                "zIndex": 0,
+                "block": true,
+                "ghost": false,
+                "loading": false,
+                "shape": "rectangle",
+                "size": "medium",
+                "theme": "primary",
+                "variant": "base",
+                "text": "ControlButton1",
+                "id": "id-96089",
+                "componentName": "elControlButton",
+                "name": "ControlButton1",
+                "data_id": "632efb"
+              }
+            ],
+            "id": "id-55806",
+            "data_id": "c7f84d"
+          },
+          {
+            "componentName": "elContainer",
+            "name": "ContentAreaMain1",
+            "area": "main",
+            "top": "0",
+            "left": "0",
+            "width": "100%",
+            "height": "100%",
+            "position": "relative",
+            "noPlace": false,
+            "noDrag": true,
+            "visible": true,
+            "disable": false,
+            "zIndex": 0,
+            "pid": "id-66662",
+            "childComponents": [
+              {
+                "top": "0",
+                "left": "0",
+                "width": "100%",
+                "height": "100%",
+                "value": "1",
+                "noPlace": true,
+                "visible": true,
+                "disable": false,
+                "zIndex": 0,
+                "overflowY": "hidden",
+                "overflowX": "hidden",
+                "type": "border-card",
+                "tagPosition": "top",
+                "childComponents": [
+                  {
+                    "componentName": "elContainer",
+                    "name": "ContentArea1",
+                    "text": "登录窗口",
+                    "top": "0",
+                    "left": "0",
+                    "width": "100%",
+                    "height": "100%",
+                    "noPlace": false,
+                    "noDrag": true,
+                    "visible": true,
+                    "disable": false,
+                    "pid": "id-50855",
+                    "zIndex": 0,
+                    "childComponents": [
+                      {
+                        "top": "11",
+                        "left": "116",
+                        "width": "350",
+                        "height": "350",
+                        "no_place": true,
+                        "visible": true,
+                        "disable": false,
+                        "zIndex": 0,
+                        "customListening": true,
+                        "HTML": "<template>\n  <div class=\"w-full max-w-xs\">\n    <form class=\"bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4\">\n      <div class=\"mb-4\">\n        <label class=\"block text-gray-700 text-sm font-bold mb-2\" for=\"username\">\n          用户名\n        </label>\n        <!-- Move v-model to the input element -->\n        <input v-model=\"item.data.username\" class=\"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline\" id=\"username\" type=\"text\" placeholder=\"用户名\">\n        <p v-if=\"item.data.username_error_msg\" class=\"text-red-500 text-xs italic\">{{item.data.username_error_msg}}</p>\n\n      </div>\n      <div class=\"mb-6\">\n        <label class=\"block text-gray-700 text-sm font-bold mb-2\" for=\"password\">\n          密码\n        </label>\n        <!-- Move v-model to the input element -->\n        <input v-model=\"item.data.password\" class=\"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline\" id=\"password\" type=\"password\" placeholder=\"******************\">\n        <p v-if=\"item.data.password_error_msg\" class=\"text-red-500 text-xs italic\">{{item.data.password_error_msg}}</p>\n      </div>\n      <div class=\"flex items-center justify-between\">\n        <button\n            @click=\"onSendEvent('登录按钮被点击',item.data)\"\n            class=\"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline\" type=\"button\">\n          登录\n        </button>\n        <a\n            @click=\"onSendEvent('忘记密码按钮被点击',item.data)\"\n\n            class=\"inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800\" href=\"#\">\n          忘记密码?\n        </a>\n      </div>\n    </form>\n  </div>\n</template>\n\n<script setup>\nimport {defineEmits, defineProps} from \"vue\";\nconst { item } = defineProps(['item'])\nconsole.log(\"自定义组件数据\", item);\nconst emits = defineEmits([\"CustomEvent\"]);\nconsole.log(\"自定义组件事件\", emits);\nfunction onSendEvent(name,data) {\n  console.log(\"自定义组件\",name,\"发送数据\", item.data);\n  emits(\"CustomEvent\",name,data);\n}\n\n</script>",
+                        "data": {
+                          "username": "admin",
+                          "password": "admin",
+                          "password_error_msg": "",
+                          "username_error_msg": ""
+                        },
+                        "id": "id-76001",
+                        "componentName": "elCustomComponent",
+                        "自定义组件名称": "登录框",
+                        "name": "登录框1",
+                        "text": "登录框1",
+                        "data_id": "b8465b",
+                        "event_登录按钮被点击": "登录框1登录按钮被点击",
+                        "event_忘记密码按钮被点击": "登录框1忘记密码按钮被点击"
+                      }
+                    ],
+                    "id": "id-13306",
+                    "data_id": "2890a2"
+                  },
+                  {
+                    "componentName": "elContainer",
+                    "name": "ContentArea2",
+                    "text": "设置页面",
+                    "top": "0",
+                    "left": "0",
+                    "width": "100%",
+                    "height": "100%",
+                    "noPlace": false,
+                    "noDrag": true,
+                    "visible": true,
+                    "disable": false,
+                    "pid": "id-50855",
+                    "zIndex": 0,
+                    "childComponents": [
+                      {
+                        "top": "46",
+                        "left": "422",
+                        "width": "76",
+                        "height": "40",
+                        "noPlace": true,
+                        "buttonType": "default",
+                        "visible": true,
+                        "disable": false,
+                        "size": "custom",
+                        "zIndex": 0,
+                        "text": "打开网址",
+                        "id": "id-87352",
+                        "componentName": "elButton",
+                        "name": "Button1",
+                        "data_id": "357865",
+                        "event_click": "Button1Click"
+                      },
+                      {
+                        "top": "48",
+                        "left": "65",
+                        "width": "330",
+                        "height": "40",
+                        "noPlace": true,
+                        "visible": true,
+                        "disable": false,
+                        "zIndex": 0,
+                        "size": "custom",
+                        "内容": "",
+                        "type": "text",
+                        "placeholder": "请输入..",
+                        "maxlength": -1,
+                        "id": "id-15880",
+                        "componentName": "elTextEdit",
+                        "name": "TextEdit1",
+                        "text": "TextEdit1",
+                        "data_id": "d25a67"
+                      },
+                      {
+                        "top": "143",
+                        "left": "69",
+                        "width": "318",
+                        "height": "40",
+                        "noPlace": true,
+                        "visible": true,
+                        "disable": false,
+                        "zIndex": 0,
+                        "size": "custom",
+                        "内容": "",
+                        "type": "text",
+                        "placeholder": "请输入..",
+                        "maxlength": -1,
+                        "id": "id-36015",
+                        "componentName": "elTextEdit",
+                        "name": "TextEdit2",
+                        "text": "TextEdit2",
+                        "data_id": "1ea489"
+                      },
+                      {
+                        "top": "143",
+                        "left": "419",
+                        "width": "83",
+                        "height": "38",
+                        "noPlace": true,
+                        "visible": true,
+                        "disable": false,
+                        "zIndex": 0,
+                        "block": false,
+                        "ghost": false,
+                        "loading": false,
+                        "shape": "rectangle",
+                        "size": "medium",
+                        "theme": "primary",
+                        "variant": "base",
+                        "text": "获取现在的时间",
+                        "id": "id-32261",
+                        "componentName": "tdButton",
+                        "name": "Button3",
+                        "data_id": "f62ea7",
+                        "event_click": "Button3Click"
+                      }
+                    ],
+                    "id": "id-87291",
+                    "data_id": "f6ed4e"
+                  }
+                ],
+                "id": "id-50855",
+                "componentName": "elTabs",
+                "name": "Tabs1",
+                "data_id": "3d4f66",
+                "bottom": ""
+              }
+            ],
+            "id": "id-69910",
+            "data_id": "054695"
+          },
+          {
+            "componentName": "elContainer",
+            "name": "ContentAreaFooter1",
+            "area": "footer",
+            "top": "0",
+            "left": "0",
+            "width": "100%",
+            "height": "100%",
+            "position": "relative",
+            "noPlace": false,
+            "noDrag": true,
+            "visible": true,
+            "disable": false,
+            "zIndex": 0,
+            "pid": "id-66662",
+            "childComponents": [
+              {
+                "top": "-38",
+                "left": "210",
+                "width": "120",
+                "height": "40",
+                "noPlace": true,
+                "visible": true,
+                "disable": false,
+                "zIndex": 0,
+                "size": "default",
+                "truncated": false,
+                "tag": "p",
+                "tagPosition": "text-center",
+                "corlor": "#606266",
+                "text": "底部信息",
+                "id": "id-72624",
+                "componentName": "elLabel",
+                "name": "Label1",
+                "data_id": "3a800e"
+              }
+            ],
+            "id": "id-20098",
+            "data_id": "84a387"
+          },
+          {
+            "componentName": "elContainer",
+            "name": "ContentAreaAside1",
+            "area": "aside",
+            "top": "0",
+            "left": "0",
+            "width": "200px",
+            "height": "100%",
+            "position": "relative",
+            "noPlace": false,
+            "noDrag": true,
+            "visible": true,
+            "disable": false,
+            "zIndex": 0,
+            "pid": "id-66662",
+            "childComponents": [
+              {
+                "top": "0",
+                "left": "0",
+                "width": "100%",
+                "height": "100%",
+                "noPlace": true,
+                "visible": true,
+                "disable": false,
+                "zIndex": 0,
+                "select": false,
+                "选中项": [],
+                "data": [
+                  {
+                    "label": "Level one 1",
+                    "children": [
+                      {
+                        "label": "Level two 1-1",
+                        "children": [
+                          {
+                            "label": "Level three 1-1-1"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Level one 2",
+                    "children": [
+                      {
+                        "label": "Level two 2-1",
+                        "children": [
+                          {
+                            "label": "Level three 2-1-1"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Level two 2-2",
+                        "children": [
+                          {
+                            "label": "Level three 2-2-1"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Level one 3",
+                    "children": [
+                      {
+                        "label": "Level two 3-1",
+                        "children": [
+                          {
+                            "label": "Level three 3-1-1"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Level two 3-2",
+                        "children": [
+                          {
+                            "label": "Level three 3-2-1"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "id": "id-11109",
+                "componentName": "elTree",
+                "name": "Tree1",
+                "data_id": "acdc9d"
+              }
+            ],
+            "id": "id-94752",
+            "data_id": "b0190d"
+          }
+        ],
+        "id": "id-66662",
+        "componentName": "elCommonLayout",
+        "name": "CommonLayout1",
+        "data_id": "479933"
+      }
+    ],
+    "data_id": "83546e",
+    "event_created": "WinCreated"
+  }
+]

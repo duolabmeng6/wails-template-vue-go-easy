@@ -38,3 +38,4 @@ package.json.md5
 /frontend/package.json.md5
 /frontend/package-lock.json
 frontend/wailsjs/runtime/*
+*.lockb

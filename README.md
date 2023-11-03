@@ -34,13 +34,13 @@ wails dev
 
 国外地址: https://g.yx24.me
 
-画好界面点保存,会下载2个文件 `设计文件.json`,`辅助代码.js` 注意你的浏览器允许下载多个文件的权限
+画好界面点保存,会下载2个文件 `design.json`,`__aux_code.js` 注意你的浏览器允许下载多个文件的权限
 
 下载本项目的代码 复制 `go-easy-demo` 文件夹作为开发项目
 
-`go-easy-demo/frontend/src/窗口/设计文件.json`
+`go-easy-demo/frontend/src/win/design.json`
 
-`go-easy-demo/frontend/src/窗口/辅助代码.js`
+`go-easy-demo/frontend/src/win/__aux_code.js`
 
 运行项目 就可以看到你设计好的界面了.
 

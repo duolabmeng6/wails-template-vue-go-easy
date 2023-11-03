@@ -4,31 +4,31 @@
   height: 100vh;
   overflow: hidden;
   ">
-    <component is="RenderDesignComponent" v-for="(item, index) in 窗口.list" :key="index" :item="item"/>
+    <component is="RenderDesignComponent" v-for="(item, index) in win.list" :key="index" :item="item"/>
   </div>
 </template>
 
 
 <script setup>
 import {onMounted} from 'vue'
-import 组件数据 from '@/窗口/设计文件.json';
-import __辅助代码 from "@/窗口/辅助代码";
+import designData from '@/win/design.json';
+import __aux_code from "@/win/__aux_code";
 
-import {引入窗口数据} from '@/窗口/窗口数据'
+import {__load_data} from '@/win/__load_data'
 
-const 窗口 = 引入窗口数据()
+const win = __load_data()
 onMounted(() => {
-  窗口.list = []
-  窗口.组件 = {}
-  窗口.list = 组件数据
-  窗口.组件 = __辅助代码(组件数据, 窗口.组件)
-  窗口.初始化()
+  win.list = []
+  win.comps = {}
+  win.list = designData
+  win.comps = __aux_code(designData, win.comps)
+  win.init()
 
   const script = document.createElement('script')
   script.src = '/cdn.tailwindcss.com_3.3.3.js'
   document.body.appendChild(script)
   script.onload = () => {
-    console.log('tailwindcss.com_3.3.3.js 加载完成')
+    console.log('tailwindcss.com_3.3.3.js Load complete')
     tailwind.config = {
       plugins: [
         function ({addBase}) {

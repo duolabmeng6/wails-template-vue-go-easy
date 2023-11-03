@@ -13,7 +13,6 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 export default defineConfig({
     server: {
         host: "0.0.0.0",
-        port: 3000,
         hmr: {
             host: 'localhost',
             protocol: 'ws',
@@ -61,10 +60,10 @@ export default defineConfig({
     },
     optimizeDeps: {
         include: [
-            './src/窗口/设计文件.json',
-            './src/窗口/窗口事件.js',
-            './src/窗口/辅助代码.js',
-            './src/窗口/窗口事件.js',
+            './src/win/design.json',
+            './src/win/__load_data.js',
+            './src/win/__aux_code.js',
+            './src/win/event.js',
         ]
     }
 })
