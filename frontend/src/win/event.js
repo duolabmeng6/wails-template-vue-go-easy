@@ -1,6 +1,7 @@
-import * as goFc from "../../wailsjs/go/main/App";
 import {ElMessage, ElMessageBox} from "element-plus";
-import * as SystemFc from "../../wailsjs/runtime";
+import * as systemFc from "../../wailsjs/runtime";
+import * as goFc from "../../wailsjs/go/main/App";
+
 export function BindWindowEvent(c, comps) {
 
     c.登录框1登录按钮被点击 = function () {
@@ -41,7 +42,7 @@ export function BindWindowEvent(c, comps) {
 
     c.Button1Click = function () {
         console.log("Button1Click",comps.TextEdit1.text,comps.TextEdit1)
-        SystemFc.BrowserOpenURL(comps.TextEdit1.text)
+        systemFc.BrowserOpenURL(comps.TextEdit1.text)
     }
 
     c.Button3Click = function () {
