@@ -1,5 +1,9 @@
 <template>
-  <div style="position: relative;">
+  <div style="position: relative; 
+  width: 100vw; 
+  height: 100vh;
+
+  ">
     <component is="RenderDesignComponent" v-for="(item, index) in 窗口.list" :key="index" :item="item"/>
   </div>
 </template>

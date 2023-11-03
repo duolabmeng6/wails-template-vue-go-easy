@@ -25,6 +25,12 @@ export const 引入窗口数据 = defineStore('窗口数据', {
 
             try {
                 //使用一种自适应方法兼容window和macos的窗口大小
+                if (dthis.组件.窗口.width.value.includes('v') || dthis.组件.窗口.width.value.includes('%')) {
+                    return;
+                }
+                if (dthis.组件.窗口.height.value.includes('v') || dthis.组件.窗口.height.value.includes('%')) {
+                    return;
+                }
                 WindowSetSize(parseInt(dthis.组件.窗口.width), parseInt(dthis.组件.窗口.height))
                 //重新计算客户区宽度高度
                 setTimeout(function () {
