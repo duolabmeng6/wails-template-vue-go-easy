@@ -20,7 +20,7 @@ const getItemStyle = (item) => {
         border: item.border,
         background: item.background,
         zIndex: item.层级,
-        color: item.文字颜色,
+        color: item.textCorlor,
     };
 
     return style;
@@ -81,6 +81,8 @@ const getItemStyleShape = (item) => {
         background: item.background,
         zIndex: item.层级,
         position: 'absolute',
+        overflowY: item.overflowY || 'visible',
+        overflowX: item.overflowX || 'visible'
     };
 
 

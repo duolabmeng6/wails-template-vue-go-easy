@@ -1,47 +1,38 @@
 <template>
-  <div
-      :style="getItemStyleShape(item)"
-  >
-    <div
-        v-show="item.可视 || item.visible"
-        :id="item.名称"
-        :class="{ 'disabled': item.禁用 || item.disable }"
-        :style="{
-              overflowY: item.y轴滚动模式选项 || 'visible',
-              overflowX: item.x轴滚动模式选项 || 'visible'
-        }"
-        class="子组件"
-        v-demo="item"
-
-    >
-      <template v-if="item.组件名称=='elContainer'">
-
-        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in item.子组件" :key="subIndex"
-                   :item="subItem"/>
+  <div :style="getItemStyleShape(item)">
+    <div v-show="item.visible || item.visible" :id="item.name" :class="{ 'disabled': item.disable || item.disable }"
+      :style="{
+        overflowY: item.overflowY || 'visible',
+        overflowX: item.overflowX || 'visible'
+      }" class="子组件" v-demo="item">
+      <template v-if="item.componentName == 'Window'">
+        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in item.childComponents" :key="subIndex"
+          :item="subItem" />
       </template>
-      <template v-else-if="item.自定义监听">
-        <component :is="item.组件名称" :item="item"  @CustomEvent="(n,v)=>{onCustomEvent(n,v,item)}"/>
+      <template v-if="item.componentName == 'elContainer'">
+
+        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in item.childComponents" :key="subIndex"
+          :item="subItem" />
+      </template>
+      <template v-else-if="item.customListening">
+        <component :is="item.componentName" :item="item" @CustomEvent="(n, v) => { onCustomEvent(n, v, item) }" />
       </template>
       <template v-else>
-        <component :is="item.组件名称" :item="item" />
+        <component :is="item.componentName" :item="item" />
       </template>
 
-      <template v-if="item.组件名称 == 'Window'">
-        <component :is="item.组件名称" :item="item"/>
-        <component is="RenderDesignComponent" v-for="(subItem, subIndex) in item.子组件" :key="subIndex"
-                   :item="subItem"/>
-      </template>
+
 
     </div>
   </div>
 </template>
 
 <script setup>
-import {defineProps} from 'vue';
-import {引入窗口数据} from '@/窗口/窗口数据'
-import {getItemStyleShape} from "@/public";
+import { defineProps } from 'vue';
+import { 引入窗口数据 } from '@/窗口/窗口数据'
+import { getItemStyleShape } from "@/public";
 
-const {item} = defineProps(['item']);
+const { item } = defineProps(['item']);
 const emits = defineEmits(["CustomEvent"]);
 
 const store = 引入窗口数据()
@@ -76,10 +67,10 @@ const vDemo = {
   }
 }
 const onCustomEvent = (name, data, item) => {
-  console.log("收到自定义事件", "事件名称", name, "数据", data);
+  console.log("收到自定义事件", "eventName", name, "数据", data);
 
   // let callFuncName = item.名称 + "自定义事件"
-  let callFuncName = item.名称 + name
+  let callFuncName = item.name + name
   console.log("callFuncName", callFuncName)
   var dynamicFunction = undefined
   try {
@@ -93,13 +84,11 @@ const onCustomEvent = (name, data, item) => {
 </script>
 
 <style>
-
-
-.子组件 {
+.childComponents {
   position: relative;
   width: 100%;
   height: 100%;
-//overflow: hidden;
+  //overflow: hidden;
 
 }
 
@@ -116,12 +105,11 @@ const onCustomEvent = (name, data, item) => {
 
 .disabled {
   pointer-events: none;
-  opacity: 0.6; /* 可选：降低透明度来表示禁用状态 */
+  opacity: 0.6;
+  /* 可选：降低透明度来表示禁用状态 */
 }
 
 .子组件.高亮 {
   background-color: rgba(0, 166, 255, 0.3);
 }
-
-
 </style>
