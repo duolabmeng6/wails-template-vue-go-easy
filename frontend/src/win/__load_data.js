@@ -11,12 +11,12 @@ export const __load_data = defineStore('window_data', {
         return data
     },
     actions: {
-        init() {
+        async init() {
 
             BindWindowEvent(this, this.comps)
             try {
                 if (this.comps.Win.hasOwnProperty("event_created")) {
-                    this.WinCreated()
+                    await this.WinCreated()
                 }
             } catch (e) {
                 console.log("WinCreated To be defined")
