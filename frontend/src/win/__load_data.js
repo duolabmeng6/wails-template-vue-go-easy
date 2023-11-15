@@ -25,6 +25,9 @@ export const __load_data = defineStore('window_data', {
             const dthis = this
 
             try {
+                setTimeout(function () {
+                    systemFc.WindowShow()
+                }, 200)
                 if (dthis.comps.Win.width.includes('v') || dthis.comps.Win.width.includes('%')) {
                     return;
                 }
@@ -42,10 +45,6 @@ export const __load_data = defineStore('window_data', {
                 systemFc.WindowSetTitle(dthis.comps.Win.text)
                 //Move to the center of the screen
                 systemFc.WindowCenter()
-                //Give the interface 200 milliseconds to load
-                setTimeout(function () {
-                    systemFc.WindowShow()
-                }, 200)
             } catch (e) {
                 console.error("Error initializing win size", e)
             }
