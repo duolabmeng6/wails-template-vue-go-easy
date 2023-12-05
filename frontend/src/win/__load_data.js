@@ -28,6 +28,7 @@ export const __load_data = defineStore('window_data', {
                 setTimeout(function () {
                     systemFc.WindowShow()
                 }, 200)
+
                 if (dthis.comps.Win.width.includes('v') || dthis.comps.Win.width.includes('%')) {
                     return;
                 }
