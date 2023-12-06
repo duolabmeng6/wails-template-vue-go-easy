@@ -1,25 +1,24 @@
-
-function __aux_code(list, comps) {
-    comps.Win = list[0]
-    comps.CommonLayout1 = list[0].childComponents[0]
-    comps.ContentAreaHeader1 = list[0].childComponents[0].childComponents[0]
-    comps.Label1 = list[0].childComponents[0].childComponents[0].childComponents[0]
-    comps.ControlButton1 = list[0].childComponents[0].childComponents[0].childComponents[1]
-    comps.ContentAreaMain1 = list[0].childComponents[0].childComponents[1]
-    comps.Tabs1 = list[0].childComponents[0].childComponents[1].childComponents[0]
-    comps.ContentArea1 = list[0].childComponents[0].childComponents[1].childComponents[0].childComponents[0]
-    comps.登录框1 = list[0].childComponents[0].childComponents[1].childComponents[0].childComponents[0].childComponents[0]
-    comps.ContentArea2 = list[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1]
-    comps.Button1 = list[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[0]
-    comps.TextEdit1 = list[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[1]
-    comps.TextEdit2 = list[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[2]
-    comps.Button3 = list[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[3]
-    comps.ContentAreaFooter1 = list[0].childComponents[0].childComponents[2]
-    comps.Label1 = list[0].childComponents[0].childComponents[2].childComponents[0]
-    comps.ContentAreaAside1 = list[0].childComponents[0].childComponents[3]
-    comps.Tree1 = list[0].childComponents[0].childComponents[3].childComponents[0]
-
-    return comps
+import designData from './design.json';
+function __aux_code() {
+    return {
+        Win : designData[0],
+        CommonLayout1 : designData[0].childComponents[0],
+        ContentAreaHeader1 : designData[0].childComponents[0].childComponents[0],
+        Label1 : designData[0].childComponents[0].childComponents[0].childComponents[0],
+        ControlButton1 : designData[0].childComponents[0].childComponents[0].childComponents[1],
+        ContentAreaMain1 : designData[0].childComponents[0].childComponents[1],
+        Tabs1 : designData[0].childComponents[0].childComponents[1].childComponents[0],
+        ContentArea1 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[0],
+        登录框1 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[0].childComponents[0],
+        ContentArea2 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1],
+        Button1 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[0],
+        TextEdit1 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[1],
+        TextEdit2 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[2],
+        Button3 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[3],
+        ContentAreaFooter1 : designData[0].childComponents[0].childComponents[2],
+        ContentAreaAside1 : designData[0].childComponents[0].childComponents[3],
+        Tree1 : designData[0].childComponents[0].childComponents[3].childComponents[0],
+    }
 }
-export default __aux_code
+export default  __aux_code
     

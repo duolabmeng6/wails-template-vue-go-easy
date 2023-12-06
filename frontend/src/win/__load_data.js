@@ -1,14 +1,16 @@
 import {ref} from 'vue'
 import {defineStore} from 'pinia'
 import * as systemFc from "../../wailsjs/runtime/runtime"; // 根据实际文件路径进行修改
-import {BindWindowEvent} from '@/win/event'
+import {BindWindowEvent} from './event'
+import __aux_code from "./__aux_code";
+import designData from './design.json';
 
 export const __load_data = defineStore('window_data', {
     state: () => {
-        let data = {}
-        data.list = ref([])
-        data.comps = {}
-        return data
+        return {
+            list : ref(designData),
+            comps : __aux_code(designData)
+        }
     },
     actions: {
         async init() {

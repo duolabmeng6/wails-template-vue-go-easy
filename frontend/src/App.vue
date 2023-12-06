@@ -11,17 +11,10 @@
 
 <script setup>
 import {onMounted} from 'vue'
-import designData from '@/win/design.json';
-import __aux_code from "@/win/__aux_code";
-
-import {__load_data} from '@/win/__load_data'
+import {__load_data} from './win/__load_data'
 
 const win = __load_data()
 onMounted(() => {
-  win.list = []
-  win.comps = {}
-  win.list = designData
-  win.comps = __aux_code(designData, win.comps)
   win.init()
 
   const script = document.createElement('script')
@@ -41,15 +34,8 @@ onMounted(() => {
       ]
     }
   }
+
 })
 
 
 </script>
-
-<style>
-body {
-  margin: 0;
-  padding: 0;
-}
-
-</style>

@@ -1,8 +1,11 @@
 import {ElMessage, ElMessageBox} from "element-plus";
 import * as systemFc from "../../wailsjs/runtime";
 import * as goFc from "../../wailsjs/go/main/App";
+import {__load_data} from './__load_data'
 
-export function BindWindowEvent(c, comps) {
+export function BindWindowEvent() {
+    const c = __load_data()
+    let comps = c.comps
 
     c.登录框1登录按钮被点击 = function () {
         console.log("登录框1登录按钮被点击")
@@ -33,7 +36,7 @@ export function BindWindowEvent(c, comps) {
                     });
                 }
             })
-        
+
     }
 
     c.登录框1忘记密码按钮被点击 = function () {
@@ -47,6 +50,7 @@ export function BindWindowEvent(c, comps) {
 
     c.Button3Click = function () {
         console.log("Button3Click")
+        comps.TextEdit2.text = "abc"
         comps.TextEdit2.text = goFc.E获取系统时间()
     }
 
@@ -57,6 +61,7 @@ export function BindWindowEvent(c, comps) {
 
     c.Button1被单击 = function () {
         console.log("Button1被单击")
+
     }
 //Don't delete the event function flag
 }
