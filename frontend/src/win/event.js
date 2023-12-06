@@ -48,10 +48,10 @@ export function BindWindowEvent() {
         systemFc.BrowserOpenURL(comps.TextEdit1.text)
     }
 
-    c.Button3Click = function () {
+    c.Button3Click = async function () {
         console.log("Button3Click")
         comps.TextEdit2.text = "abc"
-        comps.TextEdit2.text = goFc.E获取系统时间()
+        comps.TextEdit2.text = await goFc.E获取系统时间()
     }
 
 
@@ -62,6 +62,11 @@ export function BindWindowEvent() {
     c.Button1被单击 = function () {
         console.log("Button1被单击")
 
+    }
+
+    c.Button2Click = async function () {
+        console.log("Button2Click")
+        comps.TextEdit1.text = "abc"
     }
 //Don't delete the event function flag
 }

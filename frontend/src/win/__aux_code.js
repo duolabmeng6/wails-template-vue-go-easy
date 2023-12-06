@@ -1,4 +1,6 @@
+
 import designData from './design.json';
+    
 function __aux_code() {
     return {
         Win : designData[0],
@@ -12,13 +14,17 @@ function __aux_code() {
         登录框1 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[0].childComponents[0],
         ContentArea2 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1],
         Button1 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[0],
-        TextEdit1 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[1],
+        TextEdit5 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[1],
         TextEdit2 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[2],
         Button3 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[3],
+        Button2 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[4],
+        TextEdit1 : designData[0].childComponents[0].childComponents[1].childComponents[0].childComponents[1].childComponents[5],
         ContentAreaFooter1 : designData[0].childComponents[0].childComponents[2],
+        Label5 : designData[0].childComponents[0].childComponents[2].childComponents[0],
         ContentAreaAside1 : designData[0].childComponents[0].childComponents[3],
         Tree1 : designData[0].childComponents[0].childComponents[3].childComponents[0],
+
     }
 }
-export default  __aux_code
+export default __aux_code
     
