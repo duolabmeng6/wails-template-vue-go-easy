@@ -19,14 +19,12 @@ import {defineProps, ref} from "vue";
 import {Icon} from '@iconify/vue';
 
 const {item} = defineProps(['item'])
-import {
-  Quit,
-  WindowMaximise,
-  WindowMinimise,
-  WindowUnmaximise,
-  WindowFullscreen,
-  WindowIsMaximised
-} from "../../../../../wailsjs/runtime";
+const Quit = window.runtime.Quit
+const WindowMaximise = window.runtime.WindowMaximise
+const WindowMinimise = window.runtime.WindowMinimise
+const WindowUnmaximise = window.runtime.WindowUnmaximise
+const WindowFullscreen = window.runtime.WindowFullscreen
+const WindowIsMaximised = window.runtime.WindowIsMaximised
 // const [isMac, setIsMac] = ref(false); // 是否是 Mac 系统
 const isMaxWindow = ref(false);
 
