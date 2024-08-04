@@ -65,3 +65,27 @@ wails dev
 ```
 
 
+# 编译项目
+为了提高调试速度我删除了运行时编译的命令
+你需要在 wails.json 删除这个注释 `(编译的时候删除这一句话可以加快调试速度)`
+
+```json
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "myproject",
+  "outputfilename": "myproject",
+  "frontend:install": "pnpm install",
+  "frontend:build(编译的时候删除这一句话可以加快调试速度)": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "“xxxxxxx”",
+    "email": "xxxxxxx@qq.com"
+  }
+}
+
+```
+然后就可以编译了
+```
+wails build
+```
