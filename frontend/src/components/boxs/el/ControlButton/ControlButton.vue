@@ -19,12 +19,17 @@ import {defineProps, ref} from "vue";
 import {Icon} from '@iconify/vue';
 
 const {item} = defineProps(['item'])
-const Quit = window.runtime.Quit
-const WindowMaximise = window.runtime.WindowMaximise
-const WindowMinimise = window.runtime.WindowMinimise
-const WindowUnmaximise = window.runtime.WindowUnmaximise
-const WindowFullscreen = window.runtime.WindowFullscreen
-const WindowIsMaximised = window.runtime.WindowIsMaximised
+try {
+  const Quit = window.runtime.Quit
+  const WindowMaximise = window.runtime.WindowMaximise
+  const WindowMinimise = window.runtime.WindowMinimise
+  const WindowUnmaximise = window.runtime.WindowUnmaximise
+  const WindowFullscreen = window.runtime.WindowFullscreen
+  const WindowIsMaximised = window.runtime.WindowIsMaximised
+} catch (e) {
+  console.log(e)
+}
+
 // const [isMac, setIsMac] = ref(false); // 是否是 Mac 系统
 const isMaxWindow = ref(false);
 

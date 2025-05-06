@@ -3,8 +3,8 @@
   "name": "myproject",
   "outputfilename": "myproject",
   "frontend:install": "pnpm install",
-  "frontend:build(编译的时候删除这一句话可以加快调试速度)": "npm run build",
-  "frontend:dev:watcher": "npm run dev",
+  "frontend:build(编译的时候删除这一句话可以加快调试速度)": "pnpm run build",
+  "frontend:dev:watcher": "pnpm run dev",
   "frontend:dev:serverUrl": "auto",
   "author": {
     "name": "“xxxxxxx”",
