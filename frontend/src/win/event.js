@@ -39,6 +39,8 @@ export function BindWindowEvent() {
                 }
             })
 
+            
+
     }
 
     c.登录框1忘记密码按钮被点击 = function () {
@@ -59,6 +61,14 @@ export function BindWindowEvent() {
 
     c.WinCreated = function () {
         console.log("WinCreated")
+
+        表格.清空表格()
+        表格.设置表头([
+            { label: '姓名', prop: 'name', width: '100px' },
+            { label: '年龄', prop: 'age', width: '100px' },
+            { label: '地址', prop: 'address', width: '200px' },
+            { label: '日期', prop: 'date', width: '150px' }
+        ]);
     }
 
     c.Button1被单击 = function () {
@@ -81,13 +91,7 @@ export function BindWindowEvent() {
         // })
 
 
-        表格.清空表格()
-        表格.设置表头([
-            { label: '姓名', prop: 'name', width: '100px' },
-            { label: '年龄', prop: 'age', width: '100px' },
-            { label: '地址', prop: 'address', width: '200px' },
-            { label: '日期', prop: 'date', width: '150px' }
-        ]);
+
 
         表格.插入行({ name: "张三", age: 18, address: "北京", date: "2016-05-02" });
         表格.批量插入([
@@ -115,7 +119,7 @@ export function BindWindowEvent() {
         console.log("按钮_修改数据被单击")
         // comps.表格1.data[0].name = "李四"
         表格.设置单元格值(0, 'name', "李四")
-        
+
     }
     //Don't delete the event function flag
 }
