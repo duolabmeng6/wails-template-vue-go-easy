@@ -1,14 +1,14 @@
 <template>
   <div class="flex h-10 justify-end flex-0">
     <button class="w-12 h-8 text-gray-500 dark:hover:text-white hover:bg-[#E9E9E9] dark:hover:bg-[#2D2D2D]"
-            @click="WindowMinimise()">
+            @click="clickWindowMinimise">
       <Icon style="display: inline" icon="mdi:window-minimize"/>
     </button>
     <button class="w-12 h-8 text-gray-500 dark:hover:text-white hover:bg-[#E9E9E9] dark:hover:bg-[#2D2D2D]"
             @click="clickMaxWindow">
       <Icon style="display: inline" icon="mdi:window-maximize"/>
     </button>
-    <button class="w-12 h-8 text-gray-500 hover:text-white hover:bg-[#C13124] dark:hover:bg-[#C13124]" @click="Quit()">
+    <button class="w-12 h-8 text-gray-500 hover:text-white hover:bg-[#C13124] dark:hover:bg-[#C13124]" @click="clickQuit">
       <Icon style="display: inline" icon="mdi:window-close"/>
     </button>
   </div>
@@ -19,26 +19,42 @@ import {defineProps, ref} from "vue";
 import {Icon} from '@iconify/vue';
 
 const {item} = defineProps(['item'])
-try {
-  const Quit = window.runtime.Quit
-  const WindowMaximise = window.runtime.WindowMaximise
-  const WindowMinimise = window.runtime.WindowMinimise
-  const WindowUnmaximise = window.runtime.WindowUnmaximise
-  const WindowFullscreen = window.runtime.WindowFullscreen
-  const WindowIsMaximised = window.runtime.WindowIsMaximised
-} catch (e) {
-  console.log(e)
-}
-
+import {
+  Quit,
+  WindowMaximise,
+  WindowMinimise,
+  WindowUnmaximise,
+  WindowFullscreen,
+  WindowIsMaximised
+} from "../../../../../wailsjs/runtime";
 // const [isMac, setIsMac] = ref(false); // 是否是 Mac 系统
-const isMaxWindow = ref(false);
+
+let instance = getCurrentInstance();
+let designMode = instance.appContext.config.globalProperties.designMode;
 
 async function clickMaxWindow() {
+  if (designMode) {
+    return;
+  }
   if (await WindowIsMaximised()) {
     WindowUnmaximise();
   } else {
     WindowMaximise();
   }
+}
+
+async function clickWindowMinimise() {
+  if (designMode) {
+    return;
+  }
+  WindowMinimise();
+}
+
+async function clickQuit() {
+  if (designMode) {
+    return;
+  }
+  Quit();
 }
 
 
