@@ -1,11 +1,13 @@
-import {ElMessage, ElMessageBox} from "element-plus";
+import { ElMessage, ElMessageBox } from "element-plus";
 import * as systemFc from "../../wailsjs/runtime";
 import * as goFc from "../../wailsjs/go/main/App";
-import {__load_data} from './__load_data'
+import { __load_data } from './__load_data'
+import { 表格操作类 } from './table.class'
 
 export function BindWindowEvent() {
     const c = __load_data()
     let comps = c.comps
+    let 表格 = 表格操作类.初始化(comps.表格1)
 
     c.登录框1登录按钮被点击 = function () {
         console.log("登录框1登录按钮被点击")
@@ -44,7 +46,7 @@ export function BindWindowEvent() {
     }
 
     c.Button1Click = function () {
-        console.log("Button1Click",comps.TextEdit1.text,comps.TextEdit1)
+        console.log("Button1Click", comps.TextEdit1.text, comps.TextEdit1)
         systemFc.BrowserOpenURL(comps.TextEdit1.text)
     }
 
@@ -68,5 +70,52 @@ export function BindWindowEvent() {
         console.log("Button2Click")
         comps.TextEdit1.text = "abc"
     }
-//Don't delete the event function flag
+
+    c.按钮_增加数据被单击 = async function () {
+        console.log("按钮_增加数据被单击")
+        // comps.表格1.data.push({
+        //     name: "张三",
+        //     age: 18,
+        //     address: "北京",
+        //     date: "2016-05-02",
+        // })
+
+
+        表格.清空表格()
+        表格.设置表头([
+            { label: '姓名', prop: 'name', width: '100px' },
+            { label: '年龄', prop: 'age', width: '100px' },
+            { label: '地址', prop: 'address', width: '200px' },
+            { label: '日期', prop: 'date', width: '150px' }
+        ]);
+
+        表格.插入行({ name: "张三", age: 18, address: "北京", date: "2016-05-02" });
+        表格.批量插入([
+            { name: "李四", age: 22, address: "上海", date: "2016-05-03" },
+            { name: "王五", age: 30, address: "广州", date: "2016-05-04" }
+        ]);
+
+        表格.设置列属性('name', { fixed: true });
+        表格.设置单元格值(0, 'age', 19);
+        console.log("总行数:", 表格.取行数());
+        console.log("总列数:", 表格.取列数());
+        console.log("第一行姓名:", 表格.取单元格值(0, 'name'));
+
+
+    }
+
+    c.按钮_清空数据被单击 = async function () {
+        console.log("按钮_清空数据被单击")
+        // comps.表格1.data = []
+        表格.清空表格()
+
+    }
+
+    c.按钮_修改数据被单击 = async function () {
+        console.log("按钮_修改数据被单击")
+        // comps.表格1.data[0].name = "李四"
+        表格.设置单元格值(0, 'name', "李四")
+        
+    }
+    //Don't delete the event function flag
 }

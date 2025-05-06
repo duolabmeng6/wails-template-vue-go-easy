@@ -112,7 +112,7 @@
                 "left": "0",
                 "width": "100%",
                 "height": "100%",
-                "value": "1",
+                "value": "2",
                 "noPlace": true,
                 "visible": true,
                 "disable": false,
@@ -308,6 +308,315 @@
                     ],
                     "id": "id-87291",
                     "data_id": "f6ed4e"
+                  },
+                  {
+                    "id": "id-50253",
+                    "name": "ContentArea3",
+                    "text": "表格测试",
+                    "componentName": "elContainer",
+                    "top": "0",
+                    "left": "0",
+                    "width": "100%",
+                    "height": "100%",
+                    "noPlace": false,
+                    "noDrag": true,
+                    "visible": true,
+                    "disable": false,
+                    "pid": "id-50855",
+                    "childComponents": [
+                      {
+                        "top": "114",
+                        "left": "36",
+                        "width": "979",
+                        "height": "200",
+                        "noPlace": true,
+                        "visible": true,
+                        "disable": false,
+                        "zIndex": 0,
+                        "stripe": false,
+                        "border": false,
+                        "select": false,
+                        "value": [],
+                        "tableLayout": "fixed",
+                        "header": [],
+                        "data": [],
+                        "id": "id-27497",
+                        "componentName": "elTable",
+                        "componentRawName": "Table",
+                        "name": "表格1",
+                        "fid": "id-50253",
+                        "data_id": "c66477"
+                      },
+                      {
+                        "top": "38",
+                        "left": "55",
+                        "width": "76",
+                        "height": "40",
+                        "noPlace": true,
+                        "buttonType": "default",
+                        "visible": true,
+                        "disable": false,
+                        "size": "custom",
+                        "zIndex": 0,
+                        "text": "增加数据",
+                        "id": "id-49332",
+                        "componentName": "elButton",
+                        "componentRawName": "Button",
+                        "name": "按钮_增加数据",
+                        "fid": "id-50253",
+                        "data_id": "752ac8",
+                        "event_click": "按钮_增加数据被单击"
+                      },
+                      {
+                        "top": "36",
+                        "left": "146",
+                        "width": "76",
+                        "height": "40",
+                        "noPlace": true,
+                        "buttonType": "default",
+                        "visible": true,
+                        "disable": false,
+                        "size": "custom",
+                        "zIndex": 0,
+                        "text": "清空数据",
+                        "id": "id-62930",
+                        "componentName": "elButton",
+                        "componentRawName": "Button",
+                        "name": "按钮_清空数据",
+                        "fid": "id-50253",
+                        "data_id": "30d4b5",
+                        "event_click": "按钮_清空数据被单击"
+                      },
+                      {
+                        "top": "33",
+                        "left": "244",
+                        "width": "76",
+                        "height": "40",
+                        "noPlace": true,
+                        "buttonType": "default",
+                        "visible": true,
+                        "disable": false,
+                        "size": "custom",
+                        "zIndex": 0,
+                        "text": "修改数据",
+                        "id": "id-40217",
+                        "componentName": "elButton",
+                        "componentRawName": "Button",
+                        "name": "按钮_修改数据",
+                        "fid": "id-50253",
+                        "data_id": "5c62e5",
+                        "event_click": "按钮_修改数据被单击"
+                      }
+                    ],
+                    "data_id": "039542",
+                    "background": ""
+                  },
+                  {
+                    "id": "id-97549",
+                    "name": "ContentArea4",
+                    "text": "选择夹测试",
+                    "componentName": "elContainer",
+                    "top": "0",
+                    "left": "0",
+                    "width": "100%",
+                    "height": "100%",
+                    "noPlace": false,
+                    "noDrag": true,
+                    "visible": true,
+                    "disable": false,
+                    "pid": "id-50855",
+                    "childComponents": [
+                      {
+                        "top": "0",
+                        "left": "0",
+                        "width": "100%",
+                        "height": "100%",
+                        "value": 0,
+                        "noPlace": true,
+                        "visible": true,
+                        "disable": false,
+                        "zIndex": 0,
+                        "overflowY": "hidden",
+                        "overflowX": "hidden",
+                        "type": "border-card",
+                        "tagPosition": "top",
+                        "childComponents": [
+                          {
+                            "componentName": "elContainer",
+                            "name": "ContentArea",
+                            "text": "tab",
+                            "图标": "fa fa-server",
+                            "top": "0",
+                            "left": "0",
+                            "width": "100%",
+                            "height": "100%",
+                            "noPlace": false,
+                            "noDrag": true,
+                            "visible": true,
+                            "disable": false,
+                            "pid": 0,
+                            "zIndex": 0,
+                            "childComponents": [
+                              {
+                                "top": "41",
+                                "left": "67",
+                                "width": "763",
+                                "height": "200",
+                                "noPlace": true,
+                                "visible": true,
+                                "disable": false,
+                                "zIndex": 0,
+                                "stripe": false,
+                                "border": false,
+                                "select": false,
+                                "value": [],
+                                "tableLayout": "fixed",
+                                "header": [
+                                  {
+                                    "label": "日期",
+                                    "prop": "date",
+                                    "width": "180",
+                                    "fixed": true
+                                  },
+                                  {
+                                    "label": "名称",
+                                    "prop": "name",
+                                    "width": "180",
+                                    "fixed": false
+                                  },
+                                  {
+                                    "label": "地址",
+                                    "prop": "address",
+                                    "width": "180",
+                                    "fixed": false
+                                  }
+                                ],
+                                "data": [
+                                  {
+                                    "date": "2016-05-03",
+                                    "name": "Tom",
+                                    "address": "No. 189, Grove St, Los Angeles"
+                                  },
+                                  {
+                                    "date": "2016-05-02",
+                                    "name": "Tom",
+                                    "address": "No. 189, Grove St, Los Angeles"
+                                  },
+                                  {
+                                    "date": "2016-05-04",
+                                    "name": "Tom",
+                                    "address": "No. 189, Grove St, Los Angeles"
+                                  },
+                                  {
+                                    "date": "2016-05-01",
+                                    "name": "Tom",
+                                    "address": "No. 189, Grove St, Los Angeles"
+                                  }
+                                ],
+                                "id": "id-10664",
+                                "componentName": "elTable",
+                                "componentRawName": "Table",
+                                "name": "表格2",
+                                "data_id": "40773d"
+                              }
+                            ],
+                            "data_id": "90eb5c"
+                          },
+                          {
+                            "componentName": "elContainer",
+                            "name": "ContentArea",
+                            "text": "tab",
+                            "图标": "fa fa-cog",
+                            "top": "0",
+                            "left": "0",
+                            "width": "100%",
+                            "height": "100%",
+                            "noPlace": false,
+                            "noDrag": true,
+                            "visible": true,
+                            "disable": false,
+                            "pid": 0,
+                            "zIndex": 0,
+                            "childComponents": [
+                              {
+                                "top": "41",
+                                "left": "67",
+                                "width": "763",
+                                "height": "200",
+                                "noPlace": true,
+                                "visible": true,
+                                "disable": false,
+                                "zIndex": 0,
+                                "stripe": false,
+                                "border": false,
+                                "select": false,
+                                "value": [],
+                                "tableLayout": "fixed",
+                                "header": [
+                                  {
+                                    "label": "日期",
+                                    "prop": "date",
+                                    "width": "180",
+                                    "fixed": true
+                                  },
+                                  {
+                                    "label": "名称",
+                                    "prop": "name",
+                                    "width": "180",
+                                    "fixed": false
+                                  },
+                                  {
+                                    "label": "地址",
+                                    "prop": "address",
+                                    "width": "180",
+                                    "fixed": false
+                                  }
+                                ],
+                                "data": [
+                                  {
+                                    "date": "2016-05-03",
+                                    "name": "Tom",
+                                    "address": "No. 189, Grove St, Los Angeles"
+                                  },
+                                  {
+                                    "date": "2016-05-02",
+                                    "name": "Tom",
+                                    "address": "No. 189, Grove St, Los Angeles"
+                                  },
+                                  {
+                                    "date": "2016-05-04",
+                                    "name": "Tom",
+                                    "address": "No. 189, Grove St, Los Angeles"
+                                  },
+                                  {
+                                    "date": "2016-05-01",
+                                    "name": "Tom",
+                                    "address": "No. 189, Grove St, Los Angeles"
+                                  }
+                                ],
+                                "id": "id-10664",
+                                "componentName": "elTable",
+                                "componentRawName": "Table",
+                                "name": "表格2",
+                                "data_id": "40773d"
+                              }
+                            ],
+                            "data_id": "2d66a7"
+                          }
+                        ],
+                        "id": "id-24372",
+                        "componentName": "elTabsTW",
+                        "componentRawName": "TabsTW",
+                        "name": "选择夹tw2",
+                        "fid": "id-97549",
+                        "data_id": "9fd452",
+                        "right": "",
+                        "bottom": ""
+                      }
+                    ],
+                    "data_id": "d88557",
+                    "right": "100%",
+                    "bottom": "100%"
                   }
                 ],
                 "id": "id-50855",
